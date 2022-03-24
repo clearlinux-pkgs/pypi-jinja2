@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x7A1C87E3F5BC42A8 (davidism@gmail.com)
 #
 Name     : pypi-jinja2
-Version  : 3.0.3
-Release  : 94
-URL      : https://files.pythonhosted.org/packages/91/a5/429efc6246119e1e3fbf562c00187d04e83e54619249eb732bb423efa6c6/Jinja2-3.0.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/91/a5/429efc6246119e1e3fbf562c00187d04e83e54619249eb732bb423efa6c6/Jinja2-3.0.3.tar.gz
-Source1  : https://files.pythonhosted.org/packages/91/a5/429efc6246119e1e3fbf562c00187d04e83e54619249eb732bb423efa6c6/Jinja2-3.0.3.tar.gz.asc
+Version  : 3.1.0
+Release  : 95
+URL      : https://files.pythonhosted.org/packages/1f/93/99a76d0fa1a8fc14442a6421abee323f8d15964979336eabd2a1834e9118/Jinja2-3.1.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/1f/93/99a76d0fa1a8fc14442a6421abee323f8d15964979336eabd2a1834e9118/Jinja2-3.1.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/1f/93/99a76d0fa1a8fc14442a6421abee323f8d15964979336eabd2a1834e9118/Jinja2-3.1.0.tar.gz.asc
 Summary  : A very fast and expressive template engine.
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -17,9 +17,6 @@ Requires: pypi-jinja2-license = %{version}-%{release}
 Requires: pypi-jinja2-python = %{version}-%{release}
 Requires: pypi-jinja2-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: Jinja2
-Provides: Jinja2-python
-Provides: Jinja2-python3
 BuildRequires : pypi(markupsafe)
 
 %description
@@ -58,15 +55,15 @@ python3 components for the pypi-jinja2 package.
 
 
 %prep
-%setup -q -n Jinja2-3.0.3
-cd %{_builddir}/Jinja2-3.0.3
+%setup -q -n Jinja2-3.1.0
+cd %{_builddir}/Jinja2-3.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641448447
+export SOURCE_DATE_EPOCH=1648149336
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -79,7 +76,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-jinja2
-cp %{_builddir}/Jinja2-3.0.3/LICENSE.rst %{buildroot}/usr/share/package-licenses/pypi-jinja2/c4dbdbc12926d4d52c9156e690640f372615c234
+cp %{_builddir}/Jinja2-3.1.0/LICENSE.rst %{buildroot}/usr/share/package-licenses/pypi-jinja2/c4dbdbc12926d4d52c9156e690640f372615c234
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
