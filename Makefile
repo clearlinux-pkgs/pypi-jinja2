@@ -1,5 +1,5 @@
 PKG_NAME := pypi-jinja2
-URL = https://files.pythonhosted.org/packages/ed/55/39036716d19cab0747a5020fc7e907f362fbf48c984b14e62127f7e68e5d/jinja2-3.1.4.tar.gz
+URL = https://files.pythonhosted.org/packages/af/92/b3130cbbf5591acf9ade8708c365f3238046ac7cb8ccba6e81abccb0ccff/jinja2-3.1.5.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
