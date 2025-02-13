@@ -7,7 +7,7 @@
 #
 Name     : pypi-jinja2
 Version  : 3.1.5
-Release  : 116
+Release  : 117
 URL      : https://files.pythonhosted.org/packages/af/92/b3130cbbf5591acf9ade8708c365f3238046ac7cb8ccba6e81abccb0ccff/jinja2-3.1.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/af/92/b3130cbbf5591acf9ade8708c365f3238046ac7cb8ccba6e81abccb0ccff/jinja2-3.1.5.tar.gz
 Summary  : A very fast and expressive template engine.
